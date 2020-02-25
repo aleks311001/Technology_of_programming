@@ -45,6 +45,6 @@ find_and_copy() {
 
 find_and_copy "$way"
 
-tar -cf "$name_tar" "$name_folder"
+tar -zcf "$name_tar" "$name_folder"
 
 echo "done"
