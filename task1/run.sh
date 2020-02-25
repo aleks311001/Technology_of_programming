@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 way=$1
 extention=$2
 name_folder=$3
@@ -46,3 +46,5 @@ find_and_copy() {
 find_and_copy "$way"
 
 tar -cf "$name_tar" "$name_folder"
+
+echo "done"
