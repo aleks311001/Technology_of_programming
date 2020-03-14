@@ -4,9 +4,9 @@ project(dich)
 set(CMAKE_CXX_STANDARD 17)
 
 set(DIRECT ${PROJECT_SOURCE_DIR})
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
-set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${DIRECT}/bin)
+set(LIBRARY_OUTPUT_PATH ${DIRECT}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${DIRECT}/lib)
 
 add_custom_command(
 	OUTPUT  ${DIRECT}/A/index.h
@@ -30,3 +30,8 @@ add_executable(CTest ${MAIN_SOURCE_TEST})
 target_link_libraries(CTest ${GTEST_LIBRARIES})
 target_link_libraries(CTest pthread)
 target_link_libraries(CTest mylib)
+
+enable_testing()
+
+add_test(Index CTest)
+add_test(My_abs CTest)
