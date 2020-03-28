@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 include_directories(include)
 
 set(CMAKE_SYSTEM_PROCESSOR arm)
-set(CMAKE_CXX_COMPILER ${CMAKE_BINARY_DIR}/${TOOLCHAIN}/arm-linux-gnueabihf-c++)
+set(CMAKE_CXX_COMPILER ${TOOLCHAIN}/arm-linux-gnueabihf-c++)
 
 project(SimpleLibrary LANGUAGES CXX)
 
@@ -14,5 +14,4 @@ add_executable(MainLib main_lib.cpp)
 
 target_link_libraries(MainLib buffer)
 
-
-install(TARGETS Main RUNTIME DESTINATION bin LIBRARY DESTINATION lib)
+install(TARGETS Main RUNTIME DESTINATION bin)
