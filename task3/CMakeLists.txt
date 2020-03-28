@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 include_directories(include)
+include_directories(src)
 
 set(CMAKE_SYSTEM_PROCESSOR arm)
 set(CMAKE_CXX_COMPILER ${TOOLCHAIN}/arm-linux-gnueabihf-g++)
@@ -14,4 +15,4 @@ add_executable(MainLib main_lib.cpp)
 
 target_link_libraries(MainLib buffer)
 
-install(TARGETS Main RUNTIME DESTINATION bin LIBRARY DESTINATION lib)
+install(TARGETS Main LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
