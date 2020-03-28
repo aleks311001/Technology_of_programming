@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 include_directories(include)
 
 set(CMAKE_SYSTEM_PROCESSOR arm)
-set(CMAKE_CXX_COMPILER ${TOOLCHAIN}/arm-linux-gnueabihf-c++)
+set(CMAKE_CXX_COMPILER ${TOOLCHAIN}/arm-linux-gnueabihf-g++)
 
 project(SimpleLibrary LANGUAGES CXX)
 
