@@ -1,0 +1,10 @@
+add_library(buffer SHARED buffer.cpp)
+
+include_directories(buffer ./)
+
+set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
+set_target_properties(buffer PROPERTIES PUBLIC_HEADER ../include/buffer.h)
+install(TARGETS buffer LIBRARY DESTINATION lib ARCHIVE DESTINATION lib PUBLIC_HEADER DESTINATION include)
