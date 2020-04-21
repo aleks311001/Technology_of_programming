@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      GOOGLE_TEST_DIR: googletest
+      GOOGLE_TEST_DIR: googletest/googletest
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -34,6 +34,6 @@ jobs:
         git clone https://github.com/google/googletest.git
         cd ../
         mkdir build && cd build/
-        cmake ..
+        cmake Task4_SOURCE_DIR=./ ..
         make
         make install
