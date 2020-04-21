@@ -38,8 +38,6 @@ jobs:
         make
         
         cd ../../../task4
-        mkdir build
-        cd build
-        cmake ..
+        cmake
         make
         make install
