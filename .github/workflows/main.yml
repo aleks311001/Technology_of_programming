@@ -37,6 +37,6 @@ jobs:
         make
         cd ../../../task4/
         mkdir build && cd build/
-        cmake ..
+        cmake CMAKE_BINARY_DIR=${PROJECT_SOURCE_DIR}/.. ..
         make
         make install
