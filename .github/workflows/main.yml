@@ -22,22 +22,20 @@ jobs:
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it mkdir build && cd build/
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
     - name: build
       run: |        
         mkdir 3rdparty
-        cd 3rdparty
+        cd 3rdparty/
         git clone https://github.com/google/googletest.git
-        cd googletest
-        mkdir build && cd build
+        cd googletest/
+        mkdir build && cd build/
         cmake ..
         make
-        
-        cd ../../../task4
-        mkdir build && cd build
-        cmake ..
+        cd ../../../task4/
+        cmake
         make
         make install
