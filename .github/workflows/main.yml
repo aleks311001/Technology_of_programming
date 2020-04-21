@@ -32,8 +32,13 @@ jobs:
         mkdir 3rdparty
         cd 3rdparty/
         git clone https://github.com/google/googletest.git
-        cd ../
+        cd googletest/
+        mkdir mybuild && cd mybuild/
+        cmake -DBUILD_SHARED_LIBS=ON ..
+        make
+        echo "GTest make finish!!!!!!!!!!!!!!!!!!!!!!!!!"
+        cd ../../../
         mkdir build && cd build/
-        cmake Task4_SOURCE_DIR=./ ..
+        cmake Task4_SOURCE_DIR=../ ..
         make
         make install
