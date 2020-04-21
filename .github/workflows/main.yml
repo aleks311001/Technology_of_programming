@@ -36,6 +36,6 @@ jobs:
         cmake ..
         make
         cd ../../../task4/
-        cmake
+        cmake .
         make
         make install
