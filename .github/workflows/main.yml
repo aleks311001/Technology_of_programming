@@ -44,4 +44,4 @@ jobs:
       with:
         exec-path: exe/bin/C
         report-path: test-report
-        working-directory: ./
+        working-directory: task4/
