@@ -46,3 +46,4 @@ jobs:
         exec-path: task4/exe/bin/C
         report-path: task4/test-report
         working-directory: task4
+        path: task4/test-report
