@@ -39,6 +39,7 @@ jobs:
         make install
         cd ..
         mkdir -p test-report
+        touch test-report/test-report
         ls
         echo "---bin---"
         ls bin
@@ -46,5 +47,5 @@ jobs:
       uses: akhtyamovpavel/ActionGtestReport@v0.0.9
       with:
         exec-path: bin/CTestExe
-        report-path: test-report
+        report-path: test-report/test-report
         working-directory: task4/
