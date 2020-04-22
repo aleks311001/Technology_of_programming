@@ -55,5 +55,4 @@ jobs:
       run: |
         cd task4
         mkdir Distributive
-        cp exe/bin/* Distributive/bin/
-        cp exe/lib/* Distributive/lib/
+        cp -r exe/* Distributive/
