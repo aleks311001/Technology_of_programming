@@ -32,12 +32,8 @@ jobs:
         mkdir 3rdparty
         cd 3rdparty/
         git clone https://github.com/google/googletest.git
-        echo "GTest clone---------------!!!!!!!!!!!!!!!!!!!!!"
         cd ../
         mkdir build && cd build/
-        echo "Start cmake---------------!!!!!!!!!!!!!!!!!!"
         cmake -DCMAKE_INSTALL_PREFIX:PATH=../ ..
-        echo "Start make---------------!!!!!!!!!!!!!!!!!!"
         make
-        echo "Start make install---------------!!!!!!!!!!!!!!!!!!"
         make install
