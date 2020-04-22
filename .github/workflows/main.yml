@@ -38,7 +38,10 @@ jobs:
         make
         make install
         cd ..
-        tree
+        ls
+        ls exe
+        ls exe/bin
+        ls exe/lib
     - name: Test
       uses: akhtyamovpavel/ActionGtestReport@v0.0.9
       with:
