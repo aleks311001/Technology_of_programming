@@ -38,6 +38,7 @@ jobs:
         make
         make install
         cd ..
+        mkdir -p test-report
     - name: Test
       uses: akhtyamovpavel/ActionGtestReport@v0.0.9
       with:
