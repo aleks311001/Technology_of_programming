@@ -40,7 +40,6 @@ jobs:
         cd ..
         mkdir -p test-report
         touch test-report/test-report
-        cd task4
         mkdir Distributive
         cp -r exe/* Distributive/
 
