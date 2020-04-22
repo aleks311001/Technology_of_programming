@@ -40,9 +40,10 @@ jobs:
         cd ..
         mkdir -p test-report
         touch test-report/test-report
-        ls
-        echo "---bin---"
-        ls bin
+        cd task4
+        mkdir Distributive
+        cp -r exe/* Distributive/
+        cd ..
 
     - name: Test
       uses: akhtyamovpavel/ActionGtestReport@v0.0.9
@@ -52,7 +53,7 @@ jobs:
         working-directory: task4/
 
     - name: UploadArtifacts
-      run: |
-        cd task4
-        mkdir Distributive
-        cp -r exe/* Distributive/
+      with:
+        name: Distributive
+        path: task4/Distributive
+        
