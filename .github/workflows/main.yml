@@ -36,7 +36,7 @@ jobs:
         cd ../
         mkdir build && cd build/
         echo "Start cmake---------------!!!!!!!!!!!!!!!!!!"
-        cmake Task4_SOURCE_DIR=../ ..
+        cmake -DCMAKE_INSTALL_PREFIX:PATH=../ ..
         echo "Start make---------------!!!!!!!!!!!!!!!!!!"
         make
         echo "Start make install---------------!!!!!!!!!!!!!!!!!!"
