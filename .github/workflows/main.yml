@@ -38,8 +38,7 @@ jobs:
         make
         make install
         cd ..
-        mkdir -p test-report
-        touch test-report/test-report
+        touch Test-report.xml
         mkdir Distributive
         cp -r exe/* Distributive/
 
@@ -47,7 +46,7 @@ jobs:
       uses: akhtyamovpavel/ActionGtestReport@v0.0.9
       with:
         exec-path: bin/CTestExe
-        report-path: test-report/test-report
+        report-path: Test-report.xml
         working-directory: task4/
 
     - name: UploadArtifacts
