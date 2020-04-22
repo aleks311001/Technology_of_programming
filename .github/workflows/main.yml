@@ -39,9 +39,12 @@ jobs:
         make install
         cd ..
         mkdir -p test-report
+        ls
+        echo "---bin---"
+        ls bin
     - name: Test
       uses: akhtyamovpavel/ActionGtestReport@v0.0.9
       with:
-        exec-path: exe/bin
+        exec-path: bin
         report-path: test-report
         working-directory: task4/
