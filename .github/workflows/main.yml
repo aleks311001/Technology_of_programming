@@ -38,13 +38,13 @@ jobs:
         make
         make install
         cd ..
-        ls
-        ls exe
         ls exe/bin
+        echo "----"
         ls exe/lib
     - name: Test
       uses: akhtyamovpavel/ActionGtestReport@v0.0.9
       with:
-        exec-path: task4/bin
+        name: test-report
+        exec-path: task4/exe/bin
         report-path: task4/test-report
         working-directory: task4
