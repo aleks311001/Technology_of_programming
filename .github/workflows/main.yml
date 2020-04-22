@@ -53,7 +53,7 @@ jobs:
         working-directory: task4/
 
     - name: UploadArtifacts
-      uses: actions/checkout@v2
+      uses: aleks311001/Technology_of_programming@v2
       with:
         name: Distributive
         path: task4/Distributive
