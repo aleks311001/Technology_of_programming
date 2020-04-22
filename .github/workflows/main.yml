@@ -43,9 +43,17 @@ jobs:
         ls
         echo "---bin---"
         ls bin
+
     - name: Test
       uses: akhtyamovpavel/ActionGtestReport@v0.0.9
       with:
         exec-path: bin/CTestExe
         report-path: test-report/test-report
         working-directory: task4/
+
+    - name: UploadArtifacts
+      run: |
+        cd task4
+        mkdir Distributive
+        cp exe/bin/* Distributive/bin/
+        cp exe/lib/* Distributive/lib/
