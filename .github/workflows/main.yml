@@ -37,3 +37,11 @@ jobs:
         cmake -DCMAKE_INSTALL_PREFIX:PATH=../ ..
         make
         make install
+        cd ..
+        tree
+    - name: Test
+      uses: akhtyamovpavel/ActionGtestReport@v0.0.9
+      with:
+        exec-path: task4/bin
+        report-path: task4/test-report
+        working-directory: task4
