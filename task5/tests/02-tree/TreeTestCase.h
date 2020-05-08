@@ -9,6 +9,8 @@
 #include <boost/filesystem/path.hpp>
 
 class TreeTestCase : public ::testing::Test {
+protected:
+    
 };
 
 
