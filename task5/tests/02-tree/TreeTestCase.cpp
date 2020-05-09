@@ -15,9 +15,13 @@ TEST(tree_test, test1) {
     ASSERT_THROW(GetTree(temp_dir.native(), true), std::invalid_argument);
     boost::filesystem::create_directory(temp_dir);
     
+    auto dir = boost::filesystem::unique_path();
+    dir = temp_dir / dir;
+    boost::filesystem::create_directory(dir);
+    
     auto file_name = boost::filesystem::unique_path();
-    auto file_path = temp_dir / file_name;
-    boost::filesystem::ofstream tmp_file (file_path);
+    auto file_path = dir / file_name;
+    boost::filesystem::ofstream tmp_file(file_path);
     
     ASSERT_THROW(GetTree(file_path.native(), true), std::invalid_argument);
     ASSERT_FALSE(GetTree(temp_dir.native(), true) == GetTree(temp_dir.native(), false));
